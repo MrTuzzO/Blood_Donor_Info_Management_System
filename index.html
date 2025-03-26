@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BDIMS</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">LOGO</a>
+            </div>
+            <div class="menu_toggle" onclick="toggleMenu()"></div>
+            <div class="main_menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="add-member.html">Be a donor</a></li>
+                    <li><a href="login.php">Change Info</a></li>
+                    <li><a href="search.php">Find Donor</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner" id="home">
+            <div class="container">
+                <form id="searchForm" method="POST" action="search.php#donorTable">
+                    <select name="bloodgroup" id="bloodgroup">
+                        <option value="Select">Select</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section_tittle">About Us</h2>
+                <div class="df mb70">
+                    <img src="img/about_img.png" alt="">
+                    <p>
+                        Our mission is to create a safer future by connecting blood donors with those in need through a
+                        common platform. By leveraging contemporary technologies, we aim to deliver a promising web
+                        portal that unites all blood donors in Dhaka. Our goal is to ensure that every blood request
+                        in our city is fulfilled efficiently and effectively. <br> <br>
+
+                        We believe in the power of technology to bring positive change and are committed to using it to
+                        facilitate life-saving connections between donors and recipients. Through this initiative, we
+                        strive to make a significant impact on the health and well-being of our community. <br> <br>
+
+                        We are students of the <a href="https://green.edu.bd/" target="blank">Green University of
+                            Bangladesh</a>. This portal has been developed to bring
+                        technology to help humanity. We have used the best contemporary technologies to deliver a
+                        promising web portal that brings together all the blood donors in GUB, thereby fulfilling
+                        every blood request in our city.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section_tittle">Contact Us</h2>
+                <div class="contact_main mb70 df">
+                    <div class="contact_left">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.693338321704!2d90.56373737538192!3d23.82950147861638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755cb0a4c65ef27%3A0xf54f56affbffdc99!2sGreen%20University%20of%20Bangladesh!5e0!3m2!1sen!2sbd!4v1716048920040!5m2!1sen!2sbd"
+                            width="550" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contact_right">
+                        <form action="mailto:khirulislam5750@gmail.com" method="post" enctype="text/plain">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                            <label for="subject">Subject: </label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter your Subject" required>
+
+                            <label for="sms">Massege: </label>
+                            <textarea name="sms" id="sms" placeholder="Write your SMS" required></textarea>
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> All Rights Reserved. Developed By <a href="https://github.com/MrTuzzO"
+                target="_blank">Khirul
+                Islam</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('bloodgroup').addEventListener('change', function () {
+            document.getElementById('searchForm').submit();
+        });
+    </script>
+</body>
+
+</html>
